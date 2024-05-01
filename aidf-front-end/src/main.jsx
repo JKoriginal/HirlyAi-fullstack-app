@@ -7,6 +7,7 @@ import './index.css'
 import RootLayout from './layouts/root.layout.jsx'
 import SignInPage from './pages/sign-in.page.jsx'
 import SignUpPage from './pages/sign-up.page.jsx'
+import MainLayout from './layouts/main.layout.jsx'
 
 
 
@@ -15,16 +16,21 @@ const router = createBrowserRouter([
  {
   element : <RootLayout />,
   children : [
-    {
-      path : "/",
-      element : <HomePage/>
+     {
+      element : <MainLayout/>,
+      children : [
+        {
+          path : "/",
+          element : <HomePage/>
+         },
+         {
+          path : "/job",
+          element : <JobPage/>
+         },
+      ]
      },
      {
-      path : "/job",
-      element : <JobPage/>
-     },
-     {
-      path : "/sign-in",
+      path : "/sign-in", 
       element : <SignInPage/>
      },
      {
