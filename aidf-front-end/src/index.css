@@ -73,6 +73,19 @@
     body {
       @apply bg-background text-foreground;
     }
+    h1 {
+      @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl ;
+    }
+    h2 {
+      @apply scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0 ;
+    }
+    h3{
+      @apply scroll-m-20 text-xl font-medium tracking-tight;
+    }
+    p{
+      @apply leading-7 [&:not(:first-child)]:mt-6 ;
+
+    }
     .text-underlay-1{
       background: linear-gradient(98deg, #d9ff00 -9.47%, #00a49d 65.47%);
       background-clip: text;
