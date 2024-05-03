@@ -1,11 +1,13 @@
+import Hero from "./components/Hero";
 
 function HomePage() {
   
   return (
-   <main className="p-4">
+   <div >
+    <Hero />
 
     
-   </main>
+   </div>
   );
 }
 
