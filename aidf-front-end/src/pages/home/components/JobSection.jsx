@@ -12,9 +12,16 @@ function JobSection() {
 
         {
             _id : "abc",
-            title: "software Engineer",
+            title: "Software Engineer",
             type : "Full-time",
             location : "Colombo, Sri Lanka",
+        },
+
+        {
+            _id : "abc",
+            title: "Software Engineer",
+            type : "Hybrid",
+            location : "Rajagiriya, Sri Lanka",
         },
     ];
 
@@ -24,11 +31,15 @@ function JobSection() {
             <div className="mt-4 flex flex-col gap-y-8">
                {
                 jobs.map((job) => {
-                    return (<JobCard
+                    return (
+                     <JobCard
+                        key = {job.id}
                         title ={job.title} 
                         _id = {job.id} 
                         type = {job.type} 
-                        location = {job.location}/>)
+                        location = {job.location}
+                        
+                        />);
 
                 })
                }
